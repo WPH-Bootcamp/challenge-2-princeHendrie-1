@@ -161,6 +161,78 @@ body {
   object-fit: cover;
 }
 
+/* --- Who We Are & What We Do Styles --- */
+.who-we-are,
+.what-we-do {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.who-we-are h2,
+.what-we-do h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.who-we-are p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.who-we-are p strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 4rem;
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.service-card {
+  background-color: transparent;
+  border: 1px solid #1a1a1a;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  border-color: var(--primary-color);
+  background-color: #0d0a16;
+}
+
+.service-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  color: var(--primary-color);
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 /* --- Responsif --- */
 @media screen and (max-width: 900px) {
   .nav-links,
@@ -203,5 +275,24 @@ body {
 
   .hero-image img {
     max-width: 80%;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .who-we-are p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .who-we-are h2,
+  .what-we-do h2 {
+    font-size: 2rem;
   }
 }
