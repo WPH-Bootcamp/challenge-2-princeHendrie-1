@@ -176,11 +176,16 @@ body {
 }
 
 .who-we-are p {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   font-size: 1.5rem;
   color: var(--text-main);
   line-height: 1.5;
+}
+
+.who-we-are p span {
+  color: gray;
+  font-weight: 600;
 }
 
 .who-we-are p strong {
@@ -231,6 +236,86 @@ body {
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+/* --- Our Work Styles --- */
+.our-work,
+.meet-team {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.our-work h2,
+.meet-team h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.work-card {
+  text-align: left;
+}
+
+.work-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: #1a1a1a;
+}
+
+.work-card p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* --- Meet the Team Styles --- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-img-wrapper {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background-color: #1a1a1a;
+}
+
+.team-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.team-card span {
+  color: var(--text-muted);
+  font-size: 0.85rem;
 }
 
 /* --- Responsif --- */
@@ -294,5 +379,27 @@ body {
   .who-we-are h2,
   .what-we-do h2 {
     font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-img-wrapper {
+    width: 150px;
+    height: 150px;
   }
 }
